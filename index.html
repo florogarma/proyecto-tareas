@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.9/index.global.min.js'></script>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'resourceTimelineWeek'
+            });
+            calendar.render();
+        });
+
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <h1>Lista de Tareas</h1>
+
+    <!-- Formulario para agregar tareas -->
+    <form id="formulario-tarea">
+        <label for="nueva-tarea">Nueva Tarea:</label>
+        <input type="text" id="nueva-tarea" placeholder="Escribe una tarea..." required>
+
+
+        <!-- ... otros campos ... -->
+        <label for="comentario">Comentario:</label>
+        <input type="text" id="comentario" placeholder="Agrega un comentario..."></input>
+
+
+
+        <!-- Selector para elegir la lista de tareas -->
+        <select id="lista-seleccionada">
+            <option value="trabajo">Trabajo</option>
+            <option value="personales">Personales</option>
+            <option value="compras">Compras</option>
+        </select>
+
+        <label for="etiquetas">Etiquetas:</label>
+        <input type="text" id="etiquetas" name="etiquetas" placeholder="Escribe etiquetas separadas por comas">
+
+        <!-- Selector para elegir la prioridad -->
+        <label for="prioridad">Prioridad:</label>
+        <select id="prioridad" name="prioridad">
+            <option value="1">Baja</option>
+            <option value="2">Media</option>
+            <option value="3">Alta</option>
+        </select>
+
+        <label for="fecha-vencimiento">Fecha de Vencimiento:</label>
+        <input type="date" id="fecha-vencimiento">
+
+        <button type="submit">Agregar Tarea</button>
+
+        <label for="buscar-etiqueta">Buscar por etiqueta:</label>
+        <input type="text" id="buscar-etiqueta" placeholder="Escribe una etiqueta...">
+        <button id="boton-buscar">Buscar</button>
+    </form>
+
+
+    <div class="columna" id="columna-trabajo">
+        <h2>Trabajo</h2>
+        <ul id="lista-trabajo">
+            <!-- Aquí se mostrarán las tareas de trabajo -->
+        </ul>
+    </div>
+
+    <div class="columna" id="columna-personales">
+        <h2>Personales</h2>
+        <ul id="lista-personales">
+            <!-- Aquí se mostrarán las tareas personales -->
+        </ul>
+    </div>
+
+    <div class="columna" id="columna-compras">
+        <h2>Compras</h2>
+        <ul id="lista-compras">
+            <!-- Aquí se mostrarán las tareas de compras -->
+        </ul>
+    </div>
+
+    <!-- Formulario de registro -->
+    <form id="registro-formulario">
+        <!-- Campos de registro -->
+        <!-- Botón de registro -->
+    </form>
+
+    <!-- Calendario -->
+    <div id='calendario'></div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>

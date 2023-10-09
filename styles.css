@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.columna-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+}
+
+.columna {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#calendario {
+    background-color: #ad8f8f;
+}
+
+
+.fc-event {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+}
+
+.fc-daygrid-day {
+    background-color: #e0dddd;
+}
+
+.fc-daygrid-day:hover {
+    background-color: #f2f2f2;
+}
