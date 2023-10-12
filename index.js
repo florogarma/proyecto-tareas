@@ -37,7 +37,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
 document.addEventListener("DOMContentLoaded", function () {
     
-    var calendar;
+    let calendar;
 
     // Ejemplo de estructura de tarea con fecha de vencimiento
     const tareaEjemplo = {
@@ -224,7 +224,7 @@ mostrarTareasEnColumna("compras", "columna-compras");
 
 // Calendario
 
-var calendarEl = document.getElementById('calendario'); // Elemento HTML donde se mostrará el calendario
+let calendarEl = document.getElementById('calendario'); // Elemento HTML donde se mostrará el calendario
 
 calendar = new FullCalendar.Calendar(calendarEl, {
     initialView: 'dayGridMonth', // Establece la vista inicial como "mes"
